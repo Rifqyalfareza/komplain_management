@@ -9,8 +9,6 @@ use Filament\Widgets\StatsOverviewWidget as BaseWidget;
 
 class PurchaseOverview extends BaseWidget
 {
-    protected ?string $heading = 'Analytics';
-    protected ?string $description = 'An overview of some analytics.';
     protected int | string | array $columnSpan = 'full';
     protected function getStats(): array
     {
