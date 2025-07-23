@@ -12,9 +12,8 @@ use Illuminate\Database\Eloquent\Builder;
 
 class RecetComplaint extends BaseWidget
 {
-    protected static ?int $sort = 1; // Prioritas urutan widget
-    protected int | string | array $columnSpan = 'full'; // Sesuaikan jika ingin setengah atau penuh
-
+    protected static ?int $sort = 1; 
+    protected int | string | array $columnSpan = 'full'; 
     public function table(Table $table): Table
     {
         return $table
@@ -81,8 +80,6 @@ class RecetComplaint extends BaseWidget
 
     protected function getTableQuery(): Builder
     {
-        return Complaint::query()
-            // ->latest()
-            ->limit(5); // Tampilkan hanya 5 terbaru
+        return Complaint::query(); 
     }
 }
